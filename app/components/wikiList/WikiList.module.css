@@ -1,0 +1,36 @@
+.card {
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 15px 20px;
+    border: 1px solid #000;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+  }
+  
+  .card p {
+    margin: 0;
+    opacity: 0.6;
+    font-size: 14px;
+    line-height: 1.5;
+    text-wrap: balance;
+  }
+
+  .card p:first-child {
+    font-weight: bold;
+  }
+
+  .readMore {
+    font-size: 16px;
+    padding: 2px;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+    font-size: 14px;
+  }

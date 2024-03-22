@@ -1,0 +1,45 @@
+.header h1 {
+  text-transform: uppercase;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.resultWrapper {
+  width: 40%;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 10%;
+  margin-right: 20px;
+}
+
+.logoWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.searchBoxWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchBoxWrapper input {
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  min-width: 400px;
+  margin: 20px 0;
+  outline: none;
+  margin-right: 20px;
+}
+
