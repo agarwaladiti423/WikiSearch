@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+First, run the development server on another repo WikiServer by using node server.js and then run this:
 
 ```bash
 npm run dev
@@ -20,17 +20,23 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Performance and security considerations:
+ -> Debouncing is applied for optimizing network calls.
+ -> Intersection observer is used for managing infinite scrolls where we are only scrolling next set of results when last element is visible on the screen.
+ -> Proper error handling is taken care using error boundary.
+ -> Unnecessary rerenders is avoided using useCallback
 
-To learn more about Next.js, take a look at the following resources:
+For security below mitigation strategy can be used:
+-> DOM purify library can be used for sanitizing the data
+-> CSP headers can be used
+-> API details can be encypted if it is having sensitive information
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## More details:
+ -> Read more navigates to wiki page for reading the detailed article
+ -> Search history is maintained and clicking on search history will refetch the selected topic
+ -> Search history is only manintained for the current session
+ -> Search results are automatically fetched once user type in the search box (using onChange event)
+ -> Loading text would be shown until we are getting the search results
+ -> Clearing the search text from search box will clear the previously fetched results
+ -> Accessibility is also taken care
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
